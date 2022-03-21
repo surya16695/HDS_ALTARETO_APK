@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="Theme.HDS_PlayerALTARETOV2" parent="@style/Theme.Leanback" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
