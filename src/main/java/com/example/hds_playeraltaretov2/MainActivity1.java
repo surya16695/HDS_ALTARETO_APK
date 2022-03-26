@@ -118,13 +118,11 @@ public class MainActivity1 extends AppCompatActivity {
 
     }
     private void act(int s, int s1) {
-
         StyledPlayerView playerView = findViewById(R.id.player_view);
         ExoPlayer player = new ExoPlayer.Builder(this).build();
         ImageView img = findViewById(R.id.imageView);
         playerView.setPlayer(player);
         playerView.setVisibility(View.GONE);
-
         //player.setRepeatMode(player.REPEAT_MODE_ALL);
         player.prepare();
         final long[] dur = {0};
@@ -132,13 +130,13 @@ public class MainActivity1 extends AppCompatActivity {
         Picasso.with(this).load(arrayList.get(s)).into(img);
         img.setVisibility(View.VISIBLE);
         playerView.setVisibility(View.GONE);
-        Toast.makeText(getApplicationContext(), "Published by :"+urls2.get(index1), Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Published by :"+urls2.get(index), Toast.LENGTH_LONG).show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 // Prepare the player.
                 player.setMediaItem(arrayList1.get(s1));
-                dur[0] = player.getDuration();
+                //dur[0] = player.getDuration();
                 player.play();
                 img.setVisibility(View.GONE);
                 playerView.setVisibility(View.VISIBLE);
